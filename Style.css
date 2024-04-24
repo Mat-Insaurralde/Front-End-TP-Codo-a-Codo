@@ -1,0 +1,164 @@
+/* Font Kontumruy Pro */
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
+/*Font DM Serif Display  */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+/* Variables de la pagina */
+:root {
+    --color-botton-form: #BFA054;
+    --font-Kontumry-Pro: "Kantumruy Pro", sans-serif;
+    --font-DM-Serif-Display:"DM Serif Display", serif;
+    --color-adadad: #ADADAD;
+}
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ 
+}
+
+/* DIV contenedor de todo  */
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+
+
+
+/* CSS LOGIN - REGISTER */
+
+
+
+
+/* Navbar superios*/
+.nav-superior {
+    height: 7.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.titles{
+    font-family: var(--font-DM-Serif-Display);
+}
+
+/* Main */
+.main-login {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    font-family: var(--font-Kontumry-Pro);
+}
+
+
+.main-login>p {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.main-login :nth-child(2) {
+    padding: 2rem;
+}
+
+
+.main-login p:last-child {
+    color: #ADADAD;
+    border-bottom: 1px solid #ADADAD;
+    line-height: 0.1rem;
+    width: 65vw;
+    margin: 0 auto;
+
+}
+
+.main-login p:last-child span {
+    background-color: white;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+/* Formulario Login - Register*/
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70vw;
+    margin: 0 auto;
+}
+
+form label {
+    font-weight: bold;
+}
+
+.form-login input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color-adadad);
+}
+
+
+.form-login input:last-child {
+    margin: 0 auto;
+    border: none;
+    width: 65vw;
+    height: 6vh;
+    border-radius: 2rem;
+    color: white;
+    background-color: var(--color-botton-form);
+}
+
+.form-login a {
+    text-decoration: none;
+    color: #ADADAD;
+    text-align: right;
+    padding: 1rem 0;
+}
+
+
+
+
+ /* Nav inferior fijado */
+.nav-inferior {
+   
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 7.5vh;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-inferior i,
+.nav-superior i {
+    font-size: 1.3rem;
+}
+
+/* ------------------------------------                         ------------------------------------ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 600px) {}
