@@ -22,10 +22,13 @@
 
 }
 
+
 nav,
 .main,
-.nav-inferior {
+.nav-inferior,
+.nav-superior {
     background-color: var(--color-fondo);
+    margin: 0 auto;
 }
 
 
@@ -130,7 +133,8 @@ form label {
     max-width: 1200px;
     position: fixed;
     bottom: 0;
-    left: 0;
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Centra horizontalmente */
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.315); 
    
     width: 100%;
@@ -164,6 +168,7 @@ form label {
     flex-direction: column;
     align-items: center;
     font-family: var(--font-DM-Serif-Display);
+    padding-bottom: 10vh;
 }
 
 .img-libro {
