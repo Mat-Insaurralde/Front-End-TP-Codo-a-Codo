@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda</title>
-    <link rel="stylesheet" href="Style.css">
+    <title>Iniciar Sesion</title>
+   
     <!-- Css Stilos generales -->
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="/Css/Style.css">
     <!-- Google icons -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -23,9 +23,7 @@
 
         <nav>
             <div class="nav-superior">
-                <h4>Libreria</h4>
-
-
+                <h4 class="titles">Libreria</h4>
                 <div>
                     <button class="ri-search-2-line"></button>
                 </div>
@@ -35,8 +33,27 @@
 
         <main>
 
-            <div class="main">
+            <div class="main-login-register">
 
+
+                <form class="form-login-register" action="post">
+
+                    <label for="email">Email </label>
+                    <br>
+                    <input type="email" id="email" placeholder="Ingrese su email">
+                    <br>
+                    <label for="password">Contraseña </label>
+                    <br>
+                    <input type="password" id="password" placeholder="Ingrese su contraseña">
+                    <a href="#">¿has olvidado tu contraseña?</a>
+                    <br>
+                    <input type="submit" value="Iniciar Sesion">
+
+                </form>
+
+
+                <p>Aun no estas registrado? Registrate <a href="Register.html">aqui</a></p>
+                <p><span>O continuar con</span></p>
 
             </div>
 
@@ -45,10 +62,9 @@
 
 
 
-
         <nav>
             <div class="nav-inferior ">
-                <a href="index.html" class="ri-home-5-fill"></a>
+                <a href="/index.html" class="ri-home-5-fill"></a>
                 <a href="Market.html" class="material-symbols-outlined">workspaces </a>
                 <a href="Favorites.html" class="bi bi-bookmarks "></a>
                 <button class="ri-user-line "></button>
