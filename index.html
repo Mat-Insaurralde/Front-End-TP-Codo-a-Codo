@@ -25,28 +25,25 @@
 
             <div class="header-nav">
 
-            <h4>Libreria</h4>
+                <h4>Libreria</h4>
 
-            <nav class="nav-superior">
+                <nav class="nav-superior">
 
-                <ul>
-                    <li><button class="ri-search-2-line"></button></li>
-                    <li><button class="ri-notification-3-line"></button> </li>
-                    <li>
-                        
-                        <button class="boton-usuario-desktop ri-user-line " onclick="desplegarMenu()"></button>
-                        
-                        <ul class="menu-desplegable" id="menu-usuario"  onmouseleave="ocultarMenu()">
-                            <li> <a href="Views/Login.html">Iniciar sesion</a> </li>
-                            <li> <a href="Views/Register.html">Crear cuenta</a> </li>
-                            <li> <a href="Views/Contacto.html">Contacto</a> </li>
-                        </ul>
+                    <ul>
+                        <li><button class="ri-search-2-line"></button></li>
+                        <li><button class="ri-notification-3-line"></button> </li>
+                        <li>
+                            <button class="boton-usuario-desktop ri-user-line " onclick="desplegarMenu()"></button>
+                            <ul class="menu-desplegable" id="menu-usuario" onmouseleave="ocultarMenu()">
+                                <li> <a href="Views/Login.html">Iniciar sesion</a> </li>
+                                <li> <a href="Views/Register.html">Crear cuenta</a> </li>
+                                <li> <a href="Views/Contacto.html">Contacto</a> </li>
+                            </ul>
+                        </li>
 
-                    </li>
+                    </ul>
 
-                </ul>
-
-            </nav>
+                </nav>
 
             </div>
         </header>
@@ -140,11 +137,21 @@
 
 
         <nav>
+            <!-- Navbar inferior -->
             <div class="nav-inferior ">
+              
                 <a href="index.html" class="ri-home-5-fill"></a>
                 <a href="Views/Market.html" class="material-symbols-outlined">workspaces </a>
                 <a href="Views/Favorites.html" class="bi bi-bookmarks "></a>
-                <button class="ri-user-line "></button>
+               <!-- boton menu usuario -->
+                <button class="ri-user-line " onclick="desplegarMenuMovil()"></button>
+               <!--Menu desplegable-->
+                <ul class="menu-desplegable" id="menu-usuario-movil">
+                    <li> <a href="Views/Login.html">Iniciar sesion</a> </li>
+                    <li> <a href="Views/Register.html">Crear cuenta</a> </li>
+                    <li> <a href="Views/Contacto.html">Contacto</a> </li>
+                </ul>
+
             </div>
         </nav>
 

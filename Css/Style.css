@@ -61,40 +61,48 @@ header {
 
 /* Navbar Superior */
 
-
+.nav-inferior ul li,
 .nav-superior ul li {
     display: inline-block;
     position: relative;
+    
 }
 .nav-superior ul li button {
-    padding: 0.7rem;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
 }
 
 
 
 /* menu user */
-
+.nav-inferior ul.menu-desplegable,
 .nav-superior ul li ul.menu-desplegable {
     display: none;
     position: absolute;
     width: 10rem;
     z-index: 999;
     right: 0;
-    bottom: -6.6rem;
+
     background-color: var(--color-fondo);
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.315);
+    /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.315); */
 }
 
 .menu-desplegable li a {
     background-color: var(--color-fondo);
+    font-family: var(--font-DM-Serif-Display);
     display: block;
     text-decoration: none;
     padding: 0.2rem 1rem;
     color: black;
-    font-size: 1.2rem;
-    width: 100%;
+    font-size: 1rem;
+    width: 10rem;
     height: 2rem;
 }
+
+.menu-desplegable li:hover a {
+    background-color: #b8b8b8 ;
+}
+
 
 
 .titles {
@@ -202,15 +210,16 @@ form label {
     align-items: center;
 }
 
-.nav-inferior a:nth-child(1),
-.nav-inferior a:nth-child(2) {
+/* estilos de iconos inferiores que sean hijos directos 1 y2 */
+.nav-inferior > a:nth-child(1),
+.nav-inferior > a:nth-child(2) {
     border: none;
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-size: 1.5rem;
 }
 
-.nav-inferior a:nth-child(3),
+.nav-inferior > a:nth-child(3),
 .nav-inferior button:nth-child(4),
 .header button {
     border: none;
@@ -326,6 +335,13 @@ form label {
     .boton-usuario-desktop{
         display: none;
     }
+    .menu-desplegable{
+        bottom: 100%;
+       }
+    .nav-inferior ul li a{
+
+        font-size:1rem;
+    }
 
 }
 
@@ -333,12 +349,20 @@ form label {
 
 
 
-/* Tablet desde 600px */
-@media screen and (min-width: 601px) {
-    .boton-usuario-desktop {
+/* Tablet desde 600px hasta 991px */
+@media screen and (min-width: 601px  ) and (max-width: 991px) {
+    .boton-usuario-desktop{
         display: none;
     }
 
+
+
+   .menu-desplegable{
+    bottom: 100%;
+   }
+
+
+    
 }
 
 
@@ -348,10 +372,14 @@ form label {
 
 /* Laptops/Desktop desde 992px*/
 @media screen and (min-width: 992px) {
+    .nav-superior ul li ul.menu-desplegable {
+        padding-top: 1rem;
+    }
 
-    .boton-usuario-desktop {
+    .boton-usuario-desktop{
         display: block;
     }
+    
 
     .nav-inferior {
         display: none;

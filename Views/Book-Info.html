@@ -61,12 +61,24 @@
 
 
 
+
+
         <nav>
             <div class="nav-inferior ">
-                <a href="./../index.html" class="ri-home-5-fill"></a>
+                <!-- Navbar inferior -->
+                <a href="../index.html" class="ri-home-5-fill"></a>
                 <a href="Market.html" class="material-symbols-outlined">workspaces </a>
                 <a href="Favorites.html" class="bi bi-bookmarks "></a>
-                <button class="ri-user-line "></button>
+               <!-- Boton menu usuario -->
+                <button class="ri-user-line " onclick="desplegarMenuMovil()"></button>
+
+               <!--Menu deplegable  -->
+                <ul class="menu-desplegable" id="menu-usuario-movil">
+                    <li> <a href="Login.html">Iniciar sesion</a> </li>
+                    <li> <a href="Register.html">Crear cuenta</a> </li>
+                    <li> <a href="Contacto.html">Contacto</a> </li>
+                </ul>
+
             </div>
         </nav>
 
