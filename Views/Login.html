@@ -20,14 +20,38 @@
 
     <div class="container">
 
-        <nav>
-            <div class="nav-superior">
-                <h4 class="titles">Libreria</h4>
-                <div>
-                    <button class="ri-search-2-line"></button>
-                </div>
+        <header class="header">
+
+            <div class="header-nav">
+
+            <h4>Libreria</h4>
+
+            <nav class="nav-superior">
+
+
+                <ul>
+                    <li><button class="ri-search-2-line"></button></li>
+                    <li><button class="ri-notification-3-line"></button> </li>
+                    <li>
+                        
+                        <button class="boton-usuario-desktop ri-user-line " onclick="desplegarMenu()"></button>
+                        
+                        <ul class="menu-desplegable" id="menu-usuario"  onmouseleave="ocultarMenu()">
+                            <li> <a href="Login.html">Iniciar sesion</a> </li>
+                            <li> <a href="Register.html">Crear cuenta</a> </li>
+                            <li> <a href="Contacto.html">Contacto</a> </li>
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+
+            </nav>
+
             </div>
-        </nav>
+        </header>
+
 
 
         <main>
@@ -71,6 +95,9 @@
         </nav>
 
     </div>
+
+
+    <script src="/Script.js"></script>
 
 </body>
 

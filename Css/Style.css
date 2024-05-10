@@ -1,46 +1,52 @@
-/* Font Kontumruy Pro */
-@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
+/* Importamos las variables */
+@import url("Variables.css");
+/* Font Kontumruy  */
+@import url(https://db.onlinewebfonts.com/c/a6568fd9c484ff7ccb51f126480c8032?family=Kantumruy+Regular);
 /*Font DM Serif Display  */
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
 
 
-/* Variables */
-:root {
-    --color-botton-form: #BFA054;
-    --font-Kontumry-Pro: "Kantumruy Pro", sans-serif;
-    --font-DM-Serif-Display: "DM Serif Display", serif;
-    --color-adadad: #ADADAD;
-    --color-fondo: #FBF8F2;
-}
 
+
+/* Estilos generales */
 
 
 * {
+    background-color: var(--color-fondo);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body,
-nav,
+.header-nav,
 .main,
-.nav-inferior,
-.nav-superior {
+.nav-inferior {
     background-color: var(--color-fondo);
     margin: 0 auto;
 }
 
 
 
+/* ----------------------- */
 
 
-/* CSS Celulares Login Register*/
 
-/* Navbar superior*/
-.nav-superior {
+
+
+/* header*/
+
+header {
+    background-color: var(--color-fondo);
+    margin-bottom: 2rem;
+}
+
+
+.header-nav {
+
     max-width: 1200px;
     width: 100%;
-    height: 7.5vh;
+    height: 8.5vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,13 +54,58 @@ nav,
 
 }
 
+.header {
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.329);
+    margin-bottom: 2rem;
+}
+
+/* Navbar Superior */
+
+
+.nav-superior ul li {
+    display: inline-block;
+    position: relative;
+}
+.nav-superior ul li button {
+    padding: 0.7rem;
+}
+
+
+
+/* menu user */
+
+.nav-superior ul li ul.menu-desplegable {
+    display: none;
+    position: absolute;
+    width: 10rem;
+    z-index: 999;
+    right: 0;
+    bottom: -6.6rem;
+    background-color: var(--color-fondo);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.315);
+}
+
+.menu-desplegable li a {
+    background-color: var(--color-fondo);
+    display: block;
+    text-decoration: none;
+    padding: 0.2rem 1rem;
+    color: black;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 2rem;
+}
 
 
 .titles {
     font-family: var(--font-DM-Serif-Display);
 }
 
+
+
 /* Main*/
+
+
 .main-login-register,
 .main {
     max-width: 1200px;
@@ -63,7 +114,7 @@ nav,
     flex-direction: column;
     justify-content: center;
     height: auto;
-    font-family: var(--font-Kontumry-Pro);
+    font-family: var(--font-Kontumruy);
 }
 
 
@@ -140,7 +191,7 @@ form label {
     left: 50%;
     /* Centra horizontalmente */
     transform: translateX(-50%);
-    /* Centra horizontalmente */
+
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.315);
 
     width: 100%;
@@ -161,7 +212,7 @@ form label {
 
 .nav-inferior a:nth-child(3),
 .nav-inferior button:nth-child(4),
-.nav-superior button {
+.header button {
     border: none;
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -217,7 +268,7 @@ form label {
 }
 
 /*  */
-.main-home>p {
+.main-home>h2 {
     padding: 1rem 0;
     align-self: flex-start;
     padding-left: 11%;
@@ -242,7 +293,7 @@ form label {
 }
 
 .libro p:nth-child(2) {
-    font-family: var(--font-Kontumry-Pro);
+    font-family: var(--font-Kontumruy);
     font-size: 0.8rem;
 }
 
@@ -261,16 +312,46 @@ form label {
 
 
 
-/* Tablets */
-@media screen and (min-width: 600px) {
 
- 
+
+
+
+
+/* MEDIA QUERYS */
+
+
+
+/* celulares hasta 600px */
+@media screen and (max-width: 600px) {
+    .boton-usuario-desktop{
+        display: none;
+    }
 
 }
 
 
-/* Escritorio */
-@media screen and (min-width: 900px) {
+
+
+
+/* Tablet desde 600px */
+@media screen and (min-width: 601px) {
+    .boton-usuario-desktop {
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+/* Laptops/Desktop desde 992px*/
+@media screen and (min-width: 992px) {
+
+    .boton-usuario-desktop {
+        display: block;
+    }
 
     .nav-inferior {
         display: none;
