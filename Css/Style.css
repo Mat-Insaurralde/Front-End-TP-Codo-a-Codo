@@ -18,14 +18,20 @@
     padding: 0;
 }
 
+
 body,
 .header-nav,
 .main,
+.contenedor-forms,
 .nav-inferior {
     background-color: var(--color-fondo);
     margin: 0 auto;
 }
 
+.contenedor-forms{
+    /* Padding para que no queden las cosas debajo del nav inferior */
+    padding-bottom: 7.5vh;
+}
 
 
 /* ----------------------- */
@@ -50,13 +56,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1.5rem;
+    padding: 0 1rem;
 
 }
 
 .header {
+    /* sombra de header */
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.329);
-    margin-bottom: 2rem;
+    /* Marigin debajo del navbar para que se vea la sombra */
+    margin-bottom: 0.5rem;
 }
 
 /* Navbar Superior */
@@ -65,11 +73,12 @@ header {
 .nav-superior ul li {
     display: inline-block;
     position: relative;
-    
+
 }
+
 .nav-superior ul li button {
     font-size: 1.2rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.4rem;
 }
 
 
@@ -100,7 +109,7 @@ header {
 }
 
 .menu-desplegable li:hover a {
-    background-color: #b8b8b8 ;
+    background-color: var(--color-botones-detalles);
 }
 
 
@@ -111,42 +120,43 @@ header {
 
 
 
-/* Main*/
 
 
-.main-login-register,
+
+/* Formularios*/
+
+
+.contenedor-forms,
 .main {
     max-width: 1200px;
     min-height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: auto;
     font-family: var(--font-Kontumruy);
 }
 
 
-.main-login-register>p {
+.contenedor-forms>p {
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
-.main-login-register :nth-child(2) {
-    padding: 2rem;
+.contenedor-forms :nth-child(2) {
+    padding: 1rem;
 }
 
 
-.main-login-register p:last-child {
+.contenedor-forms p:last-child {
     color: #ADADAD;
     border-bottom: 1px solid #ADADAD;
     line-height: 0.1rem;
-    width: 65vw;
+    width: 50vw;
     margin: 0 auto;
 
 }
 
-.main-login-register p:last-child span {
-    background-color: white;
+.contenedor-forms p:last-child span {
     padding: 0.5rem;
     text-align: center;
 }
@@ -177,21 +187,50 @@ form label {
 .form-login-register input:last-child {
     margin: 0 auto;
     border: none;
-    width: 65vw;
+    width: 70%;
     height: 6vh;
     border-radius: 2rem;
     color: white;
-    background-color: var(--color-botton-form);
+    background-color: var(--color-botones-detalles);
 }
 
 .form-login-register a {
+    font-size: 0.8rem;
     text-decoration: none;
     color: #ADADAD;
     text-align: right;
     padding: 1rem 0;
 }
 
-/* Nav inferior fijado */
+
+
+/*HTML de contacto*/
+
+
+.form-contacto h2 {
+    text-align: center;
+    color: #BFA054;
+}
+
+.form-contacto input:nth-child(8) {}
+
+.form-contacto select {
+    width: 11rem;
+}
+
+.form-contacto input[type="radio"] {}
+
+.form-contacto input[type="file"] {
+    border: none;
+}
+
+
+
+
+/* Navbar inferior fijado */
+
+
+
 .nav-inferior {
     max-width: 1200px;
     position: fixed;
@@ -199,27 +238,25 @@ form label {
     left: 50%;
     /* Centra horizontalmente */
     transform: translateX(-50%);
-
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.315);
-
     width: 100%;
     height: 7.5vh;
-
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
 /* estilos de iconos inferiores que sean hijos directos 1 y2 */
-.nav-inferior > a:nth-child(1),
-.nav-inferior > a:nth-child(2) {
+
+.nav-inferior>a:nth-child(1),
+.nav-inferior>a:nth-child(2) {
     border: none;
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-size: 1.5rem;
 }
 
-.nav-inferior > a:nth-child(3),
+.nav-inferior>a:nth-child(3),
 .nav-inferior button:nth-child(4),
 .header button {
     border: none;
@@ -318,7 +355,11 @@ form label {
 }
 
 
-
+/* Footer */
+.footer{
+    text-align: center;
+    height: 4vh;
+}
 
 
 
@@ -332,17 +373,25 @@ form label {
 
 /* celulares hasta 600px */
 @media screen and (max-width: 600px) {
-    .boton-usuario-desktop{
+
+    /* Quitamos el boton de usuario del navbar superior */
+    .boton-usuario-desktop {
         display: none;
     }
-    .menu-desplegable{
-        bottom: 100%;
-       }
-    .nav-inferior ul li a{
 
-        font-size:1rem;
+    /* El menu se desplaza hacia arriba */
+    .menu-desplegable {
+        bottom: 100%;
     }
 
+    /* Cambiamos el tamaño de la fuente del navbar inferior */
+    .nav-inferior ul li a {
+        font-size: 1rem;
+    }
+     /* Footer */
+     .footer{
+        display: none;
+     }
 }
 
 
@@ -350,19 +399,30 @@ form label {
 
 
 /* Tablet desde 600px hasta 991px */
-@media screen and (min-width: 601px  ) and (max-width: 991px) {
-    .boton-usuario-desktop{
+@media screen and (min-width: 601px) and (max-width: 991px) {
+
+    .boton-usuario-desktop {
         display: none;
     }
 
+    .menu-desplegable {
+        bottom: 100%;
+    }
+  
+    .contenedor-forms {
+        padding-bottom: 15vh;
+    }
+
+    .form-login-register input:last-child {
+        width: 50%;
+    }
+
+    /* Footer */
+    .footer{
+        display: none;
+     }
 
 
-   .menu-desplegable{
-    bottom: 100%;
-   }
-
-
-    
 }
 
 
@@ -372,17 +432,40 @@ form label {
 
 /* Laptops/Desktop desde 992px*/
 @media screen and (min-width: 992px) {
+    /* padding para menu desplegable */
     .nav-superior ul li ul.menu-desplegable {
         padding-top: 1rem;
     }
 
-    .boton-usuario-desktop{
+    /* muestro el boton de usuario */
+    .boton-usuario-desktop {
         display: block;
     }
-    
 
+    /* Saco el nav inferior */
     .nav-inferior {
         display: none;
     }
+
+
+
+    /*formularios  */
+    .contenedor-forms {
+        padding-bottom: 10vh;
+    }
+
+    .form-login-register {
+        width: 40vw;
+    }
+    /*cambio el porcentaje que ocupa el boton  */
+    .form-login-register input:last-child {
+        width: 50%;
+    }
+    .contenedor-forms p:last-child{
+    width: 30vw;
+    }
+
+
+
 
 }

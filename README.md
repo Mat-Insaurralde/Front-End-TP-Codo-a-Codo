@@ -1,2 +1,2 @@
-<h1>Trabajo en grupo codo a codo </h1>
+<h1>Trabajo Final Front-End Codo a Codo</h1>
  
