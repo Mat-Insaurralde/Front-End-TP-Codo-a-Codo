@@ -52,53 +52,42 @@
             </div>
         </header>
 
-        <!--
-		- 	al menos 5 campos
-				<imagen de cajita con sobre>
-				- nombre
-				- email
-				- mensaje (textbox)
-				- característica ARG/BRA/URU/BOL/CHI/PAR (select para ingresar código de área) 
-						+ telefono (int)
-				- acepto recibir actualizaciones? sí/no (checkbox)
-
-		-	incluir un checkbox o radiobutton
-		-	incluir un select
-		-	incluir una imagen,
-		-	validación realizada mediante js (clase del 9/5?)  -->
-
         <main>
 
             <div class="contenedor-forms form-contacto">
 
-                <h2>Contactanos</h2>
+                <h2>Contáctanos</h2>
 
                 <form class="form-login-register form-contacto" action="post">
                     <label for="nombre">Nombre </label>
-                    <br>
+                    <!-- <br> -->
                     <input type="text" id="nombre" placeholder="Ingrese su nombre">
-                    <br>
+                    <!-- <br> -->
                     <label for="email">Email </label>
-                    <br>
+                    <!-- <br> -->
                     <input type="email" id="email" placeholder="Ingrese su email">
-                    <br>
+                    <!-- <br> -->
                     <label for="mensaje">Envianos tu mensaje </label>
-                    <textarea name="mensaje" id="mensaje" placeholder=".."></textarea>
+                   
+                    <textarea name="mensaje" id="mensaje" placeholder=""></textarea>
                     <br>
 
                     <!-- Select -->
                     <select name="" id="">
-                        <option value="" disabled>Seleccione una opcion</option>
-                        <option value="">Argentina</option>
-                        <option value="">Brasil</option>
+                        <option disabled>Seleccione una opcion</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="Peru">Peru</option>
+                        <option value="Paraguay">Paraguay</option>
+                        <option value="Uruguay">Uruguay</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Otro">Otro</option>
                     </select>
-                    <br>
+             
 
-                    <!-- Input Radio -->
-                    <input type="radio" name="" id="">
-                    <p>¿Desea recibir notificaciones?</p>
+                    <!-- Input checkbox -->                 
                    
-                    <br>
+                    <p> <input type="checkbox" name="" id="">  ¿Desea recibir notificaciones?</p>
 
                     <!-- Input Archivo -->
                     <input type="file">

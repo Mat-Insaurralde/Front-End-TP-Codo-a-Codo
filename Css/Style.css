@@ -142,7 +142,7 @@ header {
     font-size: 0.8rem;
 }
 
-.contenedor-forms :nth-child(2) {
+.contenedor-forms p:first-of-type  {
     padding: 1rem;
 }
 
@@ -173,6 +173,8 @@ form {
 }
 
 form label {
+    padding: 0.9rem 0;
+    font-size: 1rem;
     font-weight: bold;
 }
 
@@ -212,18 +214,30 @@ form label {
     color: #BFA054;
 }
 
-.form-contacto input:nth-child(8) {}
+.form-contacto textarea {
+width: 15rem;
+height: 5rem;
+}
 
 .form-contacto select {
     width: 11rem;
 }
 
-.form-contacto input[type="radio"] {}
+.form-contacto  p input[type="checkbox"] {
+    width: 0.8rem;
+    height: 0.7rem;
+}
+.form-contacto p {
+    font-size: 0.8rem;
+}
 
 .form-contacto input[type="file"] {
     border: none;
 }
 
+.form-contacto p:first-of-type  {
+    padding: 1rem 0;
+}
 
 
 
