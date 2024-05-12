@@ -215,7 +215,7 @@ form label {
 }
 
 .form-contacto textarea {
-width: 15rem;
+width: 90%;
 height: 5rem;
 }
 
@@ -423,9 +423,6 @@ height: 5rem;
         bottom: 100%;
     }
   
-    .contenedor-forms {
-        padding-bottom: 15vh;
-    }
 
     .form-login-register input:last-child {
         width: 50%;
