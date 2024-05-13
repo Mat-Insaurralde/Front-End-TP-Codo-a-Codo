@@ -183,7 +183,19 @@ form label {
     background-color: var(--color-fondo);
     border-bottom: 1px solid var(--color-adadad);
 }
+.iconos-redes-login{
+    text-align: center;
 
+}
+
+.iconos-redes-login a:nth-child(1) img{
+    width: 1.5rem;
+    border-radius: 50%;
+}
+.iconos-redes-login a:nth-child(2) img{
+    width: 1.8rem;
+    border-radius: 50%;
+}
 
 .form-login-register input:last-child {
     margin: 0 auto;
