@@ -60,21 +60,23 @@
 
                 <form class="form-login-register form-contacto" action="post">
                     <label for="nombre">Nombre </label>
-          
-                    <input type="text" id="nombre" placeholder="Ingrese su nombre">
-        
+                    <input type="text" id="nombre" placeholder="Ingrese su nombre" required>
+
+
                     <label for="email">Email </label>
-         
-                    <input type="email" id="email" placeholder="Ingrese su email">
-  
-                    <label for="mensaje">Envianos tu mensaje </label>
-                   
-                    <textarea name="mensaje" id="mensaje" placeholder=""></textarea>
+                    <input type="email" id="email" placeholder="Ingrese su email" required>
+                    <label for="mensaje">Mensaje </label>
+                  <!-- Uso este div porque el form tiene display colum -->
+                     <div class="contenedor-textarea-img-contacto">
+                  
+                        <textarea name="mensaje" id="mensaje"></textarea><img src="../Img/carta.png"
+                            alt="imagen de carta">
+                    </div>
                     <br>
 
                     <!-- Select -->
-                    <select name="" id="">
-                        <option disabled>Seleccione una opcion</option>
+                    <select name="pais" id="pais" required>
+                        <option disabled selected>Selecciona tu pais</option>
                         <option value="Argentina">Argentina</option>
                         <option value="Brasil">Brasil</option>
                         <option value="Peru">Peru</option>
@@ -83,14 +85,13 @@
                         <option value="Chile">Chile</option>
                         <option value="Otro">Otro</option>
                     </select>
-             
 
-                    <!-- Input checkbox -->                 
-                   
-                    <p> <input type="checkbox" name="" id="">  ¿Desea recibir notificaciones?</p>
 
-                    <!-- Input Archivo -->
-                    <input type="file">
+                    <!-- Input checkbox -->
+
+                    <p> <input type="checkbox" name="" id="" required> ¿Desea recibir notificaciones?</p>
+
+
                     <br>
                     <input type="submit" value="Enviar">
 

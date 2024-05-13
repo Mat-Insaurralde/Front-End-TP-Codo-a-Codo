@@ -91,14 +91,13 @@ header {
     width: 10rem;
     z-index: 999;
     right: 0;
-
     background-color: var(--color-fondo);
-    /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.315); */
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .15);
 }
 
 .menu-desplegable li a {
     background-color: var(--color-fondo);
-    font-family: var(--font-DM-Serif-Display);
+    font-family: var(--font-Kontumruy);
     display: block;
     text-decoration: none;
     padding: 0.2rem 1rem;
@@ -215,9 +214,21 @@ form label {
 }
 
 .form-contacto textarea {
-width: 90%;
+width: 60%;
 height: 5rem;
+margin-right: 1rem;
 }
+
+.form-contacto img {
+    width: 4rem;
+    
+}
+/*  */
+.contenedor-textarea-img-contacto{
+    display: flex;
+    align-items: center;
+}
+
 
 .form-contacto select {
     width: 11rem;
@@ -229,10 +240,6 @@ height: 5rem;
 }
 .form-contacto p {
     font-size: 0.8rem;
-}
-
-.form-contacto input[type="file"] {
-    border: none;
 }
 
 .form-contacto p:first-of-type  {
