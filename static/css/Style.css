@@ -66,6 +66,17 @@ header {
     /* Marigin debajo del navbar para que se vea la sombra */
     margin-bottom: 0.5rem;
 }
+.titulo{
+    display: flex;
+    text-decoration: none;
+}
+.titulo h3:first-child{
+    color: black;
+}
+.titulo h3:last-child{
+    color: var(--color-botones-detalles);
+}
+
 
 /* Navbar Superior */
 
