@@ -21,11 +21,13 @@ obtenerLibros()
 
 
 fetch(baseURL , {
+
     method: 'GET',
+    mode: 'cors', // asegúrate de que esté en 'cors' y no en 'no-cors'
     headers: {
       'Content-Type': 'application/json'
-    },
-    credentials: 'include'  // Asegúrate de configurar esto si estás haciendo solicitudes con credenciales
+    }
+
   })
   .then(response => response.json())
   .then(data => console.log(data))
