@@ -12,4 +12,21 @@ function obtenerLibros() {
    
 } 
 
-console.log(obtenerLibros().then(data=>{data}));
+obtenerLibros()
+.then(data=>{console.log( data +"log mati" );})
+.catch(   error => console.log(error)
+);
+
+
+
+
+fetch(baseURL , {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    credentials: 'include'  // Asegúrate de configurar esto si estás haciendo solicitudes con credenciales
+  })
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
