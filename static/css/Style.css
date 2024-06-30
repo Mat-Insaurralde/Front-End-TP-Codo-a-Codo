@@ -66,9 +66,17 @@ header {
     /* Marigin debajo del navbar para que se vea la sombra */
     margin-bottom: 0.5rem;
 }
+.titulo img{
+    height: 1.7rem;
+    width: 1.6rem;
+    padding-right: 0.1rem;
+}
+
 .titulo{
+   
     display: flex;
     text-decoration: none;
+    font-size: 1.1rem;
 }
 .titulo h3:first-child{
     color: black;
