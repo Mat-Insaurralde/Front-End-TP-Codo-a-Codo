@@ -3,7 +3,7 @@
 document.getElementById('login-values').addEventListener('submit', function(event) {
     event.preventDefault();
     
-    const username = document.getElementById('email').value;
+    const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const errorMessage = document.getElementById('errorMessage');
 
@@ -25,7 +25,7 @@ document.getElementById('login-values').addEventListener('submit', function(even
             errorMessage.textContent = data.message || 'Credenciales incorrectas';
         }
     })
-    
+
     .catch(error => {
         errorMessage.textContent = 'Ocurrió un error. Por favor, intenta nuevamente.';
         console.error('Error:', error);
