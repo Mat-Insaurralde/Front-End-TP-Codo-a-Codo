@@ -18,7 +18,8 @@ document.getElementById('login-values').addEventListener('submit', function(even
     .then(response => response.json())
 
     .then(data => {
-        if (data.success) {
+
+        if (data.auth == true) {
             // Redirigir a la página principal o dashboard
             window.location.href = '../index.html';
         } else {
