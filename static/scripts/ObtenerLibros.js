@@ -1,4 +1,4 @@
-fetch("https://back-end-trabajo-en-grupo-codo-a-codo.onrender.com/book")
+fetch("http://localhost:3000/book")
     .then(response => response.json())
     .then(data => {
         console.log(data);

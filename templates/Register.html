@@ -57,11 +57,11 @@
             <div class="contenedor-forms">
 
 
-                <form class="form-login-register"   action="#">
+                <form class="form-login-register" id="register-values"  method="POST" >
 
-                    <label for="name">Nombre </label>
+                    <label for="nombre">Nombre </label>
 
-                    <input type="text" id="name" placeholder="ej:John Doe" required>
+                    <input type="text" id="nombre" placeholder="ej:John Doe" required>
 
 
                     <label for="email">Email </label>
@@ -69,9 +69,14 @@
                     <input type="email" id="email" placeholder="e.j : johndoe@gmail.com" required>
 
 
-                    <label for="tel">Telefono </label>
+                    <label for="telefono">Telefono </label>
 
-                    <input type="tel" id="tel" placeholder="e.j : +011 15 xxxx xxxx" required>
+                    <input type="tel" id="telefono" placeholder="e.j : +011 15 xxxx xxxx" required>
+
+
+                    <label for="fechaNac">Fecha de nacimiento </label>
+
+                    <input type="date" id="fechaNac" placeholder="" required>
 
 
                     <label for="password1">Contraseña </label>
@@ -94,7 +99,7 @@
         </main>
 
         <footer class="footer">
-            <p>&copy; 2024 nombre de la empresa</p>
+            <p>&copy; 2024 TiendaLibro</p>
         </footer>
 
         <nav>
@@ -117,6 +122,7 @@
 
 
     </div>
+    <script src="../static/scripts/Register.js"></script>
     <script src="../static/scripts/Menu.js"></script>
 </body>
 

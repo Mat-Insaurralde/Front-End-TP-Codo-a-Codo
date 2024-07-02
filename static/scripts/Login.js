@@ -5,15 +5,17 @@ document.getElementById('login-values').addEventListener('submit', function(even
     
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
+
+
     const errorMessage = document.getElementById('errorMessage');
 
-    fetch('https://back-end-trabajo-en-grupo-codo-a-codo.onrender.com/login', {
+    fetch('https://back-end-trabajo-en-grupo-codo-a-codo.onrender.com/auth/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({ email, password })
-    })
+    }) 
 
     .then(response => response.json())
 
