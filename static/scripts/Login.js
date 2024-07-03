@@ -14,6 +14,7 @@ document.getElementById('login-values').addEventListener('submit', function(even
         headers: {
             'Content-Type': 'application/json'
         },
+        credentials: 'include', 
         body: JSON.stringify({ email, password })
     }) 
 
@@ -23,7 +24,7 @@ document.getElementById('login-values').addEventListener('submit', function(even
 
         if (data.auth == true) {
             // Redirigir a la página principal o dashboard
-            window.location.href = '../index.html';
+           window.location.href = '../index.html';
         } else {
             errorMessage.textContent = data.message || 'Credenciales incorrectas';
         }

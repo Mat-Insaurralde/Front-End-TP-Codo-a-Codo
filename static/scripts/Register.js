@@ -28,8 +28,8 @@ document.getElementById('register-values').addEventListener('submit', function(e
 
         if (data.auth == true) {
             // Redirigir a la página principal o dashboard
-            window.location.href = '../index.html';
-
+          window.location.href = '../index.html';
+            
         } else {
            // errorMessage.textContent = data.message || 'Credenciales incorrectas';
             console.log(data.message); 
